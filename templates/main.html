@@ -13,17 +13,13 @@
             margin: 0;
             font-family: 'Arial', sans-serif;
         }
-        
-        .main-container {
-            padding: 0px 150px;
-        }
-
+    
         #content-container {
             max-width: 80vw;
             margin: 50px auto;
             background-color: #fff;
             border-radius: 10px;
-            padding: 20px ;
+            padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             /*overflow-x: hidden; */
             position: relative;
@@ -164,10 +160,8 @@
     
 </head>
 <body>
-    <section class="main-container">
-
-        <div id="content-container">
-            <h1>Branch Recommendation</h1>
+    <div id="content-container">
+        <h1>Branch Recommendation</h1>
 
         <div class="print-icon" onclick="window.print()">
             <i class="fas fa-download print-icon"></i>
@@ -207,7 +201,7 @@
             </div>
             <div id="branch-content" class="content-item">
                 <h1>Branch Description</h1>
-                {{ branch_content | safe }}
+                {{ branch_content }}
             </div>
             <div id="branch-insight" class="content-item">
                 <h1>Branch Insight</h1>
@@ -220,7 +214,6 @@
         {{super()}}  
     </div>
     
-</section>
     <!-- <div class="print-icon" onclick="window.print()">
         <i class="fas fa-download print-icon"></i>
         <div class="tooltip">Download</div>
